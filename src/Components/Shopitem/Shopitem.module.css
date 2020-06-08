@@ -1,0 +1,8 @@
+.container{
+    /* border: 1px solid black; */
+}
+.name{
+    font-size: 25px;
+    font-weight: bolder;
+    opacity: .5;
+}

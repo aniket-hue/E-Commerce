@@ -1,0 +1,17 @@
+.wrapper {  
+    flex-basis: 10%;
+}
+
+.wrapper p {
+    font-weight: bold;
+    color: gray;
+    font-size: 20px;
+    transition-duration: .7s;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+}
+
+.wrapper p:hover {
+    color: black;
+}

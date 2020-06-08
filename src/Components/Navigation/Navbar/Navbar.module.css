@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    /* border: 1px solid black; */
+    margin-bottom: 40px;
+}
+
+.logo,
+.link,
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    justify-content: end;
+    align-items: center;
+    flex-basis: 80%;
+}
+
+.logo {
+    transition-duration: .7s;
+    flex-basis: 10%;
+}
+
+.logo img,
+.cart img {
+    cursor: pointer;
+}
+
+.cart {
+
+    transition-duration: .7s;
+    flex-basis: 10%;
+}
+
+.cart img {
+    opacity: .4;
+    width: 25px;
+    height: 25px;
+}

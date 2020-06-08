@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 25px;
+    /* border: 1px solid black; */
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 24%;
+
+    /* border: 1px solid rgb(116, 112, 112); */
+}
+
+.img {
+    width: 100%;
+    height: 400px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 1px solid black; */
+}
+
+.paybadge {
+    margin-top: 200px;
+    display: inline-block;
+    height: 70px;
+    width: 60%;
+    /* align-items: center; */
+    background-color: rgba(207, 207, 207, 0.0);
+    opacity: 0;
+    font-weight: bolder;
+    transition-duration: .5s;
+    
+}
+
+
+
+
+.desc {
+    width: 100%;
+    display: flex;
+    padding: 0;
+
+}
+
+.name {
+    width: 85%;
+    font-size: 19px;
+    font-weight: bolder;
+    opacity: .5;
+
+}
+
+.price {
+    font-size: 19px;
+    font-weight: bolder;
+    opacity: .5;
+
+
+}
+
+.paybadge:hover {
+    background-color: rgba(207, 207, 207, 0.5);
+    opacity: 1;
+}
