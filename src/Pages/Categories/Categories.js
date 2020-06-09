@@ -1,7 +1,6 @@
 import React from 'react';
-import Navbar from '../../Components/Navigation/Navbar/Navbar';
 import Category from './Category/Category';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const Categories = (props) => {
     console.log(props)

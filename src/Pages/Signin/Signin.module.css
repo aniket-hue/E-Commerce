@@ -1,0 +1,44 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    width: 500px;
+    /* border: 1px solid black; */
+}
+
+.input {
+    margin-bottom: 80px;
+}
+
+h2 {
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+h4 {
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .6);
+    
+}
+
+.button {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+

@@ -1,11 +1,9 @@
 import React from 'react'
 import Shopitem from '../../Components/Shopitem/Shopitem';
-import Navbar from '../../Components/Navigation/Navbar/Navbar';
 import classes from './Shop.module.css';
 
 
 const Shop = (props) => {
-    console.log(props)
     return (
         <div>
             <h1 className={classes.h1}>Collections</h1>

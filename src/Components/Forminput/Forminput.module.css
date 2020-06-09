@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    width: 100%;
+}
+
+.label {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.input {
+    border: 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, .3);
+    transition-duration: .1s;
+    transition-timing-function: ease;
+    padding-bottom: 12px;
+    padding: 2px;
+    height: 30px;
+}
+
+.input:focus {
+
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+

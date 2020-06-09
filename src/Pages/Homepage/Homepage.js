@@ -1,11 +1,8 @@
 import React from 'react'
-import Navbar from '../../Components/Navigation/Navbar/Navbar';
 import Card from '../../Components/Card/Card'
 import classes from './Homepage.module.css';
-// import { Route, Switch, withRouter } from 'react-router-dom'
 
 const Homepage = (props) => {
-    console.log(props)
     return (
         <div>
             <div className={classes.card}>
@@ -21,4 +18,3 @@ const Homepage = (props) => {
     );
 }
 export default (Homepage);
-// export default withRouter(Homepage);

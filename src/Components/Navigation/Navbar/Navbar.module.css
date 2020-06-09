@@ -39,3 +39,18 @@
     width: 25px;
     height: 25px;
 }
+
+.signOut{
+    font-weight: bold;
+    color: gray;
+    flex-basis: 10%;
+    font-size: 20px;
+    transition-duration: .7s;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.signOut:hover {
+    color: black;
+}

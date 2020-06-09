@@ -25,6 +25,8 @@ const Sampleitem = (props) => {
                 )
             })
         }
+        else
+            return null
     })
     return (
         <div className={classes.container} >

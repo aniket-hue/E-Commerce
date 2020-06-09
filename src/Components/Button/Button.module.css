@@ -1,0 +1,27 @@
+.wrapper{
+
+}
+.button{
+    padding: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+.button:hover{
+    animation: sideways;
+    animation-iteration-count: 1;
+    animation-duration: .1s;
+}
+
+@keyframes sideways{
+    0%{
+        transform: translateX(-5px);
+    }
+    50%{
+        
+        transform: translateX(0px);
+    }
+    100%{
+        
+        transform: translateX(5px);
+    }
+}
