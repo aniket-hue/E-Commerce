@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Sampleitem.module.css'
-import SHOP_DATA from '../../Components/Shopdata';
+import SHOP_DATA from '../../assets/Shopdata';
 const Sampleitem = (props) => {
 
 

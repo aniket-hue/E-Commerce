@@ -5,9 +5,9 @@ import classes from './Shop.module.css';
 
 
 const Shop = (props) => {
+    console.log(props)
     return (
         <div>
-            <Navbar />
             <h1 className={classes.h1}>Collections</h1>
             <Shopitem type="hats" amount={4} />
             <Shopitem type="sneakers" amount={4} />
