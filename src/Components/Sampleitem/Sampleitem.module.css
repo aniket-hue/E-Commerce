@@ -42,13 +42,14 @@
     color: rgba(0, 0, 0, .7);
     font-size: 18px;
 
+
 }
 
 .desc {
     width: 100%;
     display: flex;
     padding: 0;
-
+    text-align: left;
 }
 
 .name {

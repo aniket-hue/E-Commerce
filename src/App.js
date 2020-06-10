@@ -11,28 +11,28 @@ import { auth } from './firebase/firebase.utils';
 class App extends Component {
   state = {
     currentUser: null
-    
   }
-  
+
   unsubscribeFromAuth = null;
-  
+
   componentDidMount() {
-    
+    console.log("componentDidMount")
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({ currentUser: user })
+      console.log("asasdas")
       this.props.history.push('/')
     })
   }
-  
-  handleSignOut() {
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount")
     this.unsubscribeFromAuth();
   }
-  
+
   render() {
-    console.log(this.props);
     return (
       <div className={classes.App}>
-        <Navbar currentUser = {this.state.currentUser} />
+        <Navbar currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route exact path='/shop' component={Shop} />
@@ -42,7 +42,7 @@ class App extends Component {
       </div>
     );
   }
-  
+
 }
 
 export default withRouter(App);
