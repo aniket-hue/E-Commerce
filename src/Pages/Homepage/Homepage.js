@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../../Components/Card/Card'
 import classes from './Homepage.module.css';
 
-const Homepage = (props) => {
+const Homepage = () => {
     return (
         <div>
             <div className={classes.card}>

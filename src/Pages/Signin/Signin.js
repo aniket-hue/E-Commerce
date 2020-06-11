@@ -3,28 +3,40 @@ import Forminput from '../../Components/Forminput/Forminput'
 import classes from './Signin.module.css';
 import Button from '../../Components/Button/Button';
 import { signInWithGoogle, auth } from '../../firebase/firebase.utils';
+import { connect } from 'react-redux';
+import { authAction } from '../../redux/Auth/authActions';
 
 class Signin extends Component {
-    state = {
-        password: '',
-        email: '',
-        passwordForSignup: '',
-        emailForSignup: '',
-        name: null,
-        confirmPassword: ''
+    stateDispatchHandle = (e) => {
+        switch (e.target.name) {
+            case 'email':
+                this.props.email(e.target.value)
+                break;
+            case 'password':
+                this.props.password(e.target.value)
+                break;
+            case 'emailForSignup':
+                this.props.emailForSignup(e.target.value)
+                break;
+            case 'passwordForSignup':
+                this.props.passwordForSignup(e.target.value)
+                break;
+            case 'name':
+                this.props.name(e.target.value)
+                break;
+            case 'confirmPassword':
+                this.props.confirmPassword(e.target.value)
+                break;
+            default:
+                break;
+        }
     }
 
-
-    handleSignInUp = (type, e) => {
-        this.setState({ [type]: e.target.value });
-
-
-    }
-
-    onSubmitHandle = async () => {
+    onSignInHandle = async () => {
         try {
-            await auth.signInWithEmailAndPassword(this.state.email, this.state.password);
-            this.setState({ email: '', password: '' })
+            await auth.signInWithEmailAndPassword(this.props.emailValue, this.props.passwordValue);
+            this.props.email('')
+            this.props.password('')
         }
         catch (error) {
 
@@ -33,20 +45,22 @@ class Signin extends Component {
 
     onSignupHandle = async () => {
         try {
-            if (this.state.password !== this.state.confirmPassword)
+            if (this.props.passwordValue !== this.props.confirmPasswordValue)
                 alert("Retype Password")
-            await auth.createUserWithEmailAndPassword(this.state.emailForSignup, this.state.confirmPassword);
-            this.setState({ emailForSignup: '', passwordForSignup: '', name: '', confirmPassword: '' })
+            await auth.createUserWithEmailAndPassword(this.props.emailForSignupValue, this.props.confirmPasswordValue);
+            this.props.emailForSignup('')
+            this.props.passwordForSignup('')
+            this.props.name('')
+            this.props.confirmPassword('')
+            this.props.confirmPassword('')
+
         }
         catch (error) {
 
         }
     }
 
-
-
     render() {
-        console.log(this.state)
         return (
             <div className={classes.wrapper}>
                 <div className={classes.form}>
@@ -54,17 +68,17 @@ class Signin extends Component {
                     <h4>Sign in with your email and password</h4>
                     <div className={classes.input}>
                         <Forminput
-                            name="name"
+                            name="email"
                             type="email"
                             label="Email"
-                            handle={(e) => this.handleSignInUp("email", e)} />
+                            handle={this.stateDispatchHandle} />
                     </div>
                     <div className={classes.input2}>
                         <Forminput
                             name="password"
                             type="password"
                             label="Password"
-                            handle={(e) => this.handleSignInUp("password", e)} />
+                            handle={this.stateDispatchHandle} />
                     </div>
                     <div className={classes.button}>
                         <Button name='SIGN IN'
@@ -77,7 +91,7 @@ class Signin extends Component {
                                 }
 
                             }
-                            handle={this.onSubmitHandle}
+                            handle={this.onSignInHandle}
                         />
                         <Button name='SIGN IN WITH GOOGLE'
                             style={
@@ -100,7 +114,7 @@ class Signin extends Component {
                             name="tezt"
                             type="text"
                             label="Display Name"
-                            handle={(e) => this.handleSignInUp("name", e)}
+                            handle={this.stateDispatchHandle}
                         />
                     </div>
                     <div className={classes.input}>
@@ -108,21 +122,21 @@ class Signin extends Component {
                             name="email"
                             type="email"
                             label="Email"
-                            handle={(e) => this.handleSignInUp("emailForSignup", e)} />
+                            handle={this.stateDispatchHandle} />
                     </div>
                     <div className={classes.input}>
                         <Forminput
                             name="password"
                             type="password"
                             label="Password"
-                            handle={(e) => this.handleSignInUp("passwordForSignup", e)} />
+                            handle={this.stateDispatchHandle} />
                     </div>
                     <div className={classes.input2}>
                         <Forminput
                             name="password"
                             type="password"
                             label="Confirm Password"
-                            handle={(e) => this.handleSignInUp("confirmPassword", e)} />
+                            handle={this.stateDispatchHandle} />
                     </div>
                     <div className={classes.button}>
                         <Button name='SIGN IN'
@@ -143,4 +157,24 @@ class Signin extends Component {
     }
 }
 
-export default Signin;
+const mapDispatchToProps = (dispatch) => ({
+    password: (value) => dispatch(authAction.password(value)),
+    email: (value) => dispatch(authAction.email(value)),
+    emailForSignup: (value) => dispatch(authAction.emailForSignup(value)),
+    passwordForSignup: (value) => dispatch(authAction.passwordForSignup(value)),
+    name: (value) => dispatch(authAction.name(value)),
+    confirmPassword: (value) => dispatch(authAction.confirmPassword(value)),
+})
+
+const mapStateToProps = (state) => {
+    return {
+        emailValue: state.auth.email,
+        passwordValue: state.auth.password,
+        emailForSignupValue: state.auth.emailForSignup,
+        passwordForSignupValue: state.auth.passwordForSignup,
+        nameValue: state.auth.name,
+        confirmPasswordValue: state.auth.confirmPassword,
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Signin);

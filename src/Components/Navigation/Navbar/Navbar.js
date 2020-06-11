@@ -5,15 +5,15 @@ import Logo from '../../../assets/crown.svg'
 import Cart from '../../../assets/shopping-bag.svg'
 import { Link } from 'react-router-dom';
 import { auth } from '../../../firebase/firebase.utils';
+import { connect } from 'react-redux';
 
 const Navbar = (props) => {
-
+    console.log(props)
     const userState = props.currentUser === null ?
         <Links name='SIGN IN' /> :
-
         <p className={classes.signOut} onClick={() => auth.signOut()}>
             SIGN OUT
-            </p>;
+        </p>;
 
     return (
         <div className={classes.container}>
@@ -33,4 +33,9 @@ const Navbar = (props) => {
         </div>
     )
 }
-export default Navbar;
+
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(Navbar);

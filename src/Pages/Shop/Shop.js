@@ -3,7 +3,7 @@ import Shopitem from '../../Components/Shopitem/Shopitem';
 import classes from './Shop.module.css';
 
 
-const Shop = (props) => {
+const Shop = () => {
     return (
         <div>
             <h1 className={classes.h1}>Collections</h1>
