@@ -5,8 +5,7 @@
 }
 
 .logo,
-.link,
-.cart {
+.link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,22 +22,10 @@
     flex-basis: 10%;
 }
 
-.logo img,
-.cart img {
+.logo img{
     cursor: pointer;
 }
 
-.cart {
-
-    transition-duration: .7s;
-    flex-basis: 10%;
-}
-
-.cart img {
-    opacity: .4;
-    width: 25px;
-    height: 25px;
-}
 
 .signOut{
     font-weight: bold;

@@ -9,6 +9,7 @@ import Shop from './Pages/Shop/Shop';
 import Categories from './Pages/Categories/Categories';
 import Navbar from './Components/Navigation/Navbar/Navbar';
 import Signin from './Pages/Signin/Signin';
+import Dropdown from './Components/DropdownCart/Dropdown';
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -28,6 +29,7 @@ class App extends Component {
     return (
       <div className={classes.App}>
         <Navbar />
+        {this.props.isToggled || <Dropdown />}
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route exact path='/shop' component={Shop} />
@@ -39,8 +41,11 @@ class App extends Component {
   }
 
 }
+const mapStateToProps = state => ({
+  isToggled: state.cart.hideCart
+})
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
 
-export default withRouter(connect(null, mapDispatchToProps)(App));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

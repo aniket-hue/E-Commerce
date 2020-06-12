@@ -1,0 +1,25 @@
+.cart {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: .7s;
+    flex-basis: 7%;
+    position: relative;
+
+}
+
+.cart p {
+    position: absolute;
+    top: 18px;
+    font-size: 12px;
+    font-weight: bolder;
+    opacity: .6;
+}
+
+.cart img {
+    opacity: .4;
+    width: 25px;
+    height: 25px;
+}
