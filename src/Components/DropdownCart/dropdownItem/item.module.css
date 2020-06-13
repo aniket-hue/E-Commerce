@@ -1,0 +1,32 @@
+.wrapper {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100px;
+    margin: 10px;    
+ 
+}
+
+.img {
+    width: 75px;    
+    margin-right: 10px;
+    height: 100%;
+}
+.desc{
+    display: flex;
+    width: 30%;
+    margin: 1px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.desc p{
+    margin: 0;
+    text-transform: capitalize;
+}
+.desc p:nth-of-type(1){
+    font-weight: bold;
+}
+.desc p:nth-of-type(2){
+    font-weight: bolder;
+}

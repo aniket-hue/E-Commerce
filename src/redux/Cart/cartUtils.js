@@ -1,6 +1,5 @@
-const cartUtility = (cartItems, itemToAdd) => {
+export const cartAddUtility = (cartItems, itemToAdd) => {
     const item = cartItems.find(cartItem => cartItem.id === itemToAdd.id)
-    console.log(item)
     if (!item) {
         return [...cartItems, { ...itemToAdd, count: 1 }]
     }
@@ -9,7 +8,8 @@ const cartUtility = (cartItems, itemToAdd) => {
             if (item.id === cartItem.id)
                 return {
                     ...cartItem,
-                    count : cartItem.count + 1
+                    price: itemToAdd.price,
+                    count: cartItem.count + 1
                 }
             else
                 return cartItem
@@ -17,4 +17,20 @@ const cartUtility = (cartItems, itemToAdd) => {
     }
 }
 
-export default cartUtility;
+
+export const cartRemoveUtility = (cartItems, itemToRemoveID) => {
+    return cartItems.map(cartItem => {
+        if (cartItem.id === itemToRemoveID) {
+            if (cartItem.count !== 1)
+                return {
+                    ...cartItem,
+                    count: cartItem.count - 1
+                }
+            else
+                return null
+        }
+        else
+            return cartItem
+    }).filter(Boolean)
+}
+

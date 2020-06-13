@@ -5,11 +5,13 @@ import { connect } from 'react-redux';
 import { setCartItem } from '../../redux/Cart/cartAction'
 const Sampleitem = (props) => {
 
-    const onPay = (id, type, url) => {
+    const onPay = (name,id, type, url, price) => {
         props.setItem({
+            name: name,
             id: id,
             type: type,
-            image: url
+            image: url,
+            price: price
         })
     }
     const element = SHOP_DATA.map(data => {
@@ -21,7 +23,7 @@ const Sampleitem = (props) => {
                     idx++ < props.amount ?
                         <div key={data.id} className={classes.wrapper} >
                             <div
-                                onClick={() => onPay(data.id, props.name, data.imageUrl)}
+                                onClick={() =>onPay(data.name, data.id, props.name, data.imageUrl, data.price)}
                                 className={classes.img}
                                 style={{ backgroundImage: `url(${data.imageUrl})` }}>
                                 <p className={classes.paybadge}><br />Proceed to pay</p>
@@ -37,6 +39,7 @@ const Sampleitem = (props) => {
         else
             return null
     })
+    // console.log(element/)
     return (
         <div className={classes.container} >
             {element}

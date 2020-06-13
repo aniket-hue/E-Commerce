@@ -4,13 +4,12 @@ import classes from './Carticon.module.css';
 import { connect } from 'react-redux';
 import { setCartVisiblity } from '../../redux/Cart/cartAction'
 const Carticon = (props) => {
-    console.log(props)
     const onCartClick = () => {
         props.dropdownToggle();
     }
     return (
         <div className={classes.cart}>
-            <p>{props.count.length}</p>
+            <p>{props.count}</p>
             <img onClick={onCartClick} src={Cart} alt='#' />
         </div>
     )

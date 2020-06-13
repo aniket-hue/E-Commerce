@@ -10,6 +10,7 @@ import Categories from './Pages/Categories/Categories';
 import Navbar from './Components/Navigation/Navbar/Navbar';
 import Signin from './Pages/Signin/Signin';
 import Dropdown from './Components/DropdownCart/Dropdown';
+import Checkout from './Pages/Checkout/Checkout';
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -29,12 +30,14 @@ class App extends Component {
     return (
       <div className={classes.App}>
         <Navbar />
+
         {this.props.isToggled || <Dropdown />}
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route exact path='/shop' component={Shop} />
           <Route path='/shop/:category' render={() => <Categories />} />
           <Route exact path='/signin' component={Signin} />
+          <Route exact path='/checkout' component={Checkout} />
         </Switch>
       </div>
     );

@@ -1,0 +1,38 @@
+.table {
+    width: 100%;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0 0;
+}
+
+.table th {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.table img {
+    width: 150px;
+    height: 160px;
+}
+
+.table td {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    padding: 20px 0 5px 0;
+    width: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.remove{
+    font-size: 40px;
+    opacity: .5;
+    cursor: pointer;
+}
+.remove:hover{
+    opacity: .8;
+    font-size: 45px;
+}
+
