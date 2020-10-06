@@ -32,8 +32,6 @@
     transition-duration: .5s;
     color: rgba(0, 0, 0, .7);
     font-size: 18px;
-
-
 }
 
 .desc {
@@ -44,19 +42,15 @@
 }
 
 .name {
-    width: 85%;
     font-size: 19px;
     font-weight: bolder;
     opacity: .5;
-
 }
 
 .price {
     font-size: 19px;
     font-weight: bolder;
     opacity: .5;
-
-
 }
 
 .img:hover 

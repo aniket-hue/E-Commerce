@@ -9,9 +9,9 @@ const Card = (props) => {
   };
   return (
     <div
-      className={`d-flex justify-content-center align-items-center ${classes.wrapper}`}
-      style={style}
+      className={`d-flex justify-content-center position-relative align-items-center ${classes.wrapper}`}
     >
+      <div style={style} className={`position-absolute ${classes.imgHolder}`}></div>
       <Link to={`/shop/${props.type}`} className="text-decoration-none">
         <div className={classes.name}>
           <div className="pt-2 pt-2 pl-4 pr-4">

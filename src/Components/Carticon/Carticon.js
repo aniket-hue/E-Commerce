@@ -1,6 +1,5 @@
 import React from "react";
 import Cart from "../../assets/shopping-bag.svg";
-import classes from "./Carticon.module.css";
 import { connect } from "react-redux";
 import { setCartVisiblity } from "../../redux/Cart/cartAction";
 const Carticon = (props) => {
