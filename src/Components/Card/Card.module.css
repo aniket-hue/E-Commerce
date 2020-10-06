@@ -1,25 +1,16 @@
 .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    min-height: 300px;
     cursor: pointer;
     transition-duration: .5s;
-
-    /* transition: background-image 10s ease-in-out; */
-
-    /* border: 1px solid black; */
 }
 
 
 .name {
-    flex-basis: 30%;
     text-transform: uppercase;
     background: lightgray;
     opacity: .8;
-    text-decoration: none;
     color: black;
 }
 
