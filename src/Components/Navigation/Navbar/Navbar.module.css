@@ -1,43 +1,12 @@
-.container {
-    display: flex;
-    /* border: 1px solid black; */
-    margin-bottom: 40px;
+.signOut {
+  font-weight: bold;
+  color: gray;
+  flex-basis: 10%;
+  font-size: 20px;
+  transition-duration: 0.7s;
+  cursor: pointer;
+  text-transform: uppercase;
 }
-
-.logo,
-.link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.link {
-    justify-content: end;
-    align-items: center;
-    flex-basis: 80%;
-}
-
-.logo {
-    transition-duration: .7s;
-    flex-basis: 10%;
-}
-
-.logo img{
-    cursor: pointer;
-}
-
-
-.signOut{
-    font-weight: bold;
-    color: gray;
-    flex-basis: 10%;
-    font-size: 20px;
-    transition-duration: .7s;
-    cursor: pointer;
-    text-transform: uppercase;
-
-}
-
 .signOut:hover {
-    color: black;
+  color: black;
 }
