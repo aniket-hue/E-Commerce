@@ -4,7 +4,8 @@ import Card from "../../Components/Card/Card";
 const Homepage = () => {
   return (
     <div className="container" style={{ maxWidth: "100vw" }}>
-      <div className="row m-md-4 w-100">
+      <div className="row m-md-3"></div>
+      <div className="row  w-100">
         <div className="col-md-4 m-md-0 m-sm-2">
           <Card type="hats" />
         </div>
@@ -15,7 +16,8 @@ const Homepage = () => {
           <Card type="sneakers" />
         </div>
       </div>
-      <div className="row m-md-4 w-100">
+      <div className="row m-md-3"></div>
+      <div className="row  w-100">
         <div className="col-md-6 m-md-0 m-sm-2">
           <Card type="womens" />
         </div>
