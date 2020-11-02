@@ -1,7 +1,6 @@
 .wrapper {
   min-height: 300px;
   cursor: pointer;
-  transition-duration: 5s;
   overflow: hidden;
 }
 
@@ -15,10 +14,6 @@
 .type {
   font-size: 23px;
   font-weight: bolder;
-}
-
-.wrapper:hover {
-  background-size: 1000px 1000px;
 }
 
 .imgHolder {

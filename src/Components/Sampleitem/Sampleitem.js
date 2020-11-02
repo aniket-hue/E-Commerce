@@ -53,11 +53,31 @@ const Sampleitem = (props) => {
         ) : null;
       });
     } else return null;
-  });
-  // console.log(element/)
+  }).filter(Boolean)[0];
+  let cards = [],
+    temp = [];
+  let prev = 0;
+  for (let index = 0; index <= element.length - (element.length % 4); index++) {
+    if (index % 4 === 0) {
+      let data = [];
+      for (let i = prev; i < index; i++) data.push(element[i]);
+      cards.push(<div className="row">{data}</div>);
+      prev = index;
+    }
+  }
+  console.log(cards);
+  for (
+    let index = element.length - (element.length % 4);
+    index < element.length;
+    index++
+  )
+    temp.push(element[index]);
+  cards.push(<div className="row">{temp}</div>);
+
+  console.log(element);
   return (
-    <div className="container d-flex" style={{ maxWidth: "100vw" }}>
-      {element}
+    <div className="container" style={{ maxWidth: "100vw" }}>
+      {cards}
     </div>
   );
 };

@@ -1,13 +1,10 @@
-import React from 'react';
-import Category from './Category/Category';
-import { withRouter } from 'react-router-dom';
+import React from "react";
+import { withRouter } from "react-router-dom";
+import Shopitem from "../../Components/Shopitem/Shopitem";
 
 const Categories = (props) => {
-    return (
-        <div>
-            <Category type={props.match.params.category} />
-        </div>
-
-    )
-}
+  return (
+      <Shopitem type={props.match.params.category} amount={8} />
+  );
+};
 export default withRouter(Categories);
