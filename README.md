@@ -8,10 +8,6 @@
 
 Shop Me is a Single page application where people can purchase clothing
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
-
 ### Tech
 
 Dillinger uses a number of open source projects to work properly:
