@@ -10,7 +10,7 @@ Shop Me is a Single page application where people can purchase clothing
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+Shop Me uses a number of open source projects to work properly:
 
 * React.js
 * Bootstrap
