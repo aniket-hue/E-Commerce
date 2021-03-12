@@ -12,10 +12,10 @@ Shop Me is a Single page application where people can purchase clothing
 
 Shop Me uses a number of open source projects to work properly:
 
-* React.js
-* Bootstrap
-* Redux
-* Firebase
+- React.js
+- Bootstrap
+- Redux
+- Firebase
 
 And of course Shop Me itself is open source with a public repository
 on GitHub.
@@ -32,5 +32,3 @@ $ cd E-Commerce
 $ npm install
 $ npm start
 ```
- 
-
